@@ -46,11 +46,6 @@
 <!-- End Jekyll SEO tag -->
 
 
-  <!-- PWA cache settings -->
-  <meta
-    name="pwa-cache"
-    content="true">
-
   <title>Tutorial | Jennifer Zhan
   </title>
 
@@ -89,8 +84,8 @@
       <link rel="preconnect" href="https://cdn.jsdelivr.net" >
       <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" >
     
-      <link rel="preconnect" href="https://polyfill.io" >
-      <link rel="dns-prefetch" href="https://polyfill.io" >
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" >
+      <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" >
     
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
@@ -477,14 +472,7 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/text-and-typography/">Text and Typography</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/write-a-new-post/">Writing a New Post</a>
+          <a href="/posts/customize-the-favicon/">Customize the Favicon</a>
         </li>
       
         
@@ -498,7 +486,14 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/customize-the-favicon/">Customize the Favicon</a>
+          <a href="/posts/write-a-new-post/">Writing a New Post</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/text-and-typography/">Text and Typography</a>
         </li>
       
     </ul>
@@ -919,6 +914,9 @@
 
 
 
+<!-- Pageviews -->
+
+
 
 
 
@@ -940,7 +938,7 @@
     resultsContainer: document.getElementById('search-results'),
     json: '/assets/js/data/search.json',
     searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{snippet}</p>  </article>',
-    noResultsText: '<p class="mt-5"></p>',
+    noResultsText: '<p class="mt-5">Oops! No results found.</p>',
     templateMiddleware: function(prop, value, template) {
       if (prop === 'categories') {
         if (value === '') {

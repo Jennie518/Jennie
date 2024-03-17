@@ -45,14 +45,9 @@
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="twitter:creator" content="@cotes2020" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Cotes Chung","url":"https://github.com/cotes2020/"},"dateModified":"2024-01-31T03:44:19+08:00","datePublished":"2019-08-08T14:10:00+08:00","description":"This tutorial will guide you how to write a post in the Chirpy template, and it’s worth reading even if you’ve used Jekyll before, as many features require specific variables to be set.","headline":"Writing a New Post","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/write-a-new-post/"},"url":"http://localhost:4000/posts/write-a-new-post/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Cotes Chung","url":"https://github.com/cotes2020/"},"dateModified":"2019-08-08T14:10:00+08:00","datePublished":"2019-08-08T14:10:00+08:00","description":"This tutorial will guide you how to write a post in the Chirpy template, and it’s worth reading even if you’ve used Jekyll before, as many features require specific variables to be set.","headline":"Writing a New Post","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/write-a-new-post/"},"url":"http://localhost:4000/posts/write-a-new-post/"}</script>
 <!-- End Jekyll SEO tag -->
 
-
-  <!-- PWA cache settings -->
-  <meta
-    name="pwa-cache"
-    content="true">
 
   <title>Writing a New Post | Jennifer Zhan
   </title>
@@ -92,8 +87,8 @@
       <link rel="preconnect" href="https://cdn.jsdelivr.net" >
       <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" >
     
-      <link rel="preconnect" href="https://polyfill.io" >
-      <link rel="dns-prefetch" href="https://polyfill.io" >
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" >
+      <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" >
     
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
@@ -719,6 +714,28 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -826,29 +843,6 @@
 
       <!-- lastmod date -->
       
-        <span>
-          Updated
-          <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1706643859"
-  data-df="ll"
-  
-    data-bs-toggle="tooltip" data-bs-placement="bottom"
-  
->
-  Jan 30, 2024
-</time>
-
-        </span>
-      
 
       
 
@@ -869,8 +863,12 @@
           </em>
         </span>
 
-        <!-- read time -->
-        <!-- Calculate the post's reading time, and display the word count in tooltip -->
+        <div>
+          <!-- pageviews -->
+          
+
+          <!-- read time -->
+          <!-- Calculate the post's reading time, and display the word count in tooltip -->
 
 
 
@@ -890,14 +888,13 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1732 words"
+  title="1873 words"
 >
-  <em>9 min</em> read</span>
+  <em>10 min</em> read</span>
 
+        </div>
       </div>
-      <!-- .d-flex -->
     </div>
-    <!-- .post-meta -->
   </header>
 
   <div class="content">
@@ -1472,6 +1469,8 @@ Can be referenced as <span class="se">\e</span>qref{eq:label_name}.
 
 <h2 id="videos"><span class="me-2">Videos</span><a href="#videos" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
+<h3 id="video-sharing-platform"><span class="me-2">Video Sharing Platform</span><a href="#video-sharing-platform" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
 <p>You can embed a video with the following syntax:</p>
 
 <div class="language-liquid highlighter-rouge"><div class="code-header">
@@ -1510,6 +1509,38 @@ Can be referenced as <span class="se">\e</span>qref{eq:label_name}.
     </tr>
   </tbody>
 </table></div>
+
+<h3 id="video-file"><span class="me-2">Video File</span><a href="#video-file" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>If you want to embed a video file directly, use the following syntax:</p>
+
+<div class="language-liquid highlighter-rouge"><div class="code-header">
+        <span data-label-text="Liquid"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="cp">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>embed/video.html<span class="w"> </span><span class="na">src</span><span class="o">=</span><span class="s1">'{URL}'</span><span class="w"> </span><span class="cp">%}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>Where <code class="language-plaintext highlighter-rouge">URL</code> is an URL to a video file e.g. <code class="language-plaintext highlighter-rouge">/assets/img/sample/video.mp4</code>.</p>
+
+<p>You can also specify additional attributes for the embedded video file. Here is a full list of attributes allowed.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">poster='/path/to/poster.png'</code> - poster image for a video that is shown while video is downloading</li>
+  <li><code class="language-plaintext highlighter-rouge">title='Text'</code> - title for a video that appears below the video and looks same as for images</li>
+  <li><code class="language-plaintext highlighter-rouge">autoplay=true</code> - video automatically begins to play back as soon as it can</li>
+  <li><code class="language-plaintext highlighter-rouge">loop=true</code> - automatically seek back to the start upon reaching the end of the video</li>
+  <li><code class="language-plaintext highlighter-rouge">muted=true</code> - audio will be initially silenced</li>
+</ul>
+
+<p>Consider an example utilizing all of the above:</p>
+
+<div class="language-liquid highlighter-rouge"><div class="code-header">
+        <span data-label-text="Liquid"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="cp">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>embed/video.html<span class="w"> </span><span class="na">src</span><span class="o">=</span><span class="s1">'video.mp4'</span><span class="w"> </span><span class="na">poster</span><span class="o">=</span><span class="s1">'poster.png'</span><span class="w"> </span><span class="na">title</span><span class="o">=</span><span class="s1">'Demo video'</span><span class="w">
+   </span><span class="na">autoplay</span><span class="o">=</span><span class="kc">true</span><span class="w"> </span><span class="na">loop</span><span class="o">=</span><span class="kc">true</span><span class="w"> </span><span class="na">muted</span><span class="o">=</span><span class="kc">true</span><span class="w"> </span><span class="cp">%}</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <h2 id="learn-more"><span class="me-2">Learn More</span><a href="#learn-more" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -1641,14 +1672,7 @@ Can be referenced as <span class="se">\e</span>qref{eq:label_name}.
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/text-and-typography/">Text and Typography</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/write-a-new-post/">Writing a New Post</a>
+          <a href="/posts/customize-the-favicon/">Customize the Favicon</a>
         </li>
       
         
@@ -1662,7 +1686,14 @@ Can be referenced as <span class="se">\e</span>qref{eq:label_name}.
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/customize-the-favicon/">Customize the Favicon</a>
+          <a href="/posts/write-a-new-post/">Writing a New Post</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/text-and-typography/">Text and Typography</a>
         </li>
       
     </ul>
@@ -1999,11 +2030,13 @@ There are two wa...
 
 Headings
 
+
+
 H1 - heading
 
 H2 - heading
 
-H3 - ...
+H3 ...
                 </p>
               </div>
             </div>
@@ -2372,6 +2405,13 @@ H3 - ...
 
 
 
+<!-- Pageviews -->
+
+  
+
+  
+
+
 
 
 
@@ -2393,7 +2433,7 @@ H3 - ...
     resultsContainer: document.getElementById('search-results'),
     json: '/assets/js/data/search.json',
     searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{snippet}</p>  </article>',
-    noResultsText: '<p class="mt-5"></p>',
+    noResultsText: '<p class="mt-5">Oops! No results found.</p>',
     templateMiddleware: function(prop, value, template) {
       if (prop === 'categories') {
         if (value === '') {

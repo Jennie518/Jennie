@@ -1,6 +1,6 @@
 const swconf = {
   
-    cacheName: 'chirpy-1710709047',resources: [
+    cacheName: 'chirpy-1710709675',resources: [
       '/assets/css/jekyll-theme-chirpy.css',
       '/',
       
@@ -23,7 +23,7 @@ const swconf = {
           'fonts.gstatic.com',
           'fonts.googleapis.com',
           'cdn.jsdelivr.net',
-          'polyfill.io'
+          'cdnjs.cloudflare.com'
       
     ],denyPaths: [
       
